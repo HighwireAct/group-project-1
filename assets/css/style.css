@@ -1,0 +1,40 @@
+#header{
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 60px;
+    margin: auto;
+    
+}
+#header-h2{
+line-height: 60px;
+}
+
+#game{
+    margin-top: 25px;
+}
+ .inline{
+     display: inline-block;
+ }
+
+#play-area{
+    background-color: pink;
+    
+    text-align: center;
+    padding: 0;
+}
+#chat{
+    background-color: green;
+    
+    margin-left: 45px;
+}
+#movie-still{
+   max-height: 400px;
+   max-width: 600px;
+   margin-top: 15px;
+   margin-bottom: 20px;
+}
+#hint{
+   background-color: aliceblue;
+   padding: 20px;
+}
