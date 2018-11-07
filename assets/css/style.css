@@ -1,0 +1,17 @@
+/* Styling for inline elements */ 
+.inline {
+    /* display: inline-block; */
+}
+
+/* #game {
+    width: 600px;
+    height: 400px;
+} */
+
+#chat {
+    background-color: steelblue;
+}
+
+#play-area {
+    background-color: tomato;
+}
