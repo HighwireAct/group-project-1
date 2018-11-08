@@ -1,7 +1,30 @@
 class Game {
     constructor() {
-        this.states = [];
+        // Array of possible game states
+        this.states = [
+            new State(function() {
+                let iconSelectDiv = $("<div>");
+                iconSelectDiv.attr("id", "icon-select");
+                iconSelectDiv.addClass("centered");
+            
+                let iconSelectHeading = $("<h3>").text("Select your icon:")
+                iconSelectDiv.append(iconSelectHeading);
+            
+                for (let i in iconUrls) {
+                    let iconImg = $("<img>");
+                    iconImg.attr("src", `assets/images/${iconUrls[i]}`);
+                    iconImg.attr("height", "50px;");
+                    iconImg.addClass("icon");
+            
+                    $(iconSelectDiv).append(iconImg);
+                }
+            
+                $("#game").append(iconSelectDiv) 
+            },
+            null)
+        ];
         this.movies = [];
+        this.players = [];
         this.playerCount = 0;
         this.currentState = 0;
         this.currentRound = 0;

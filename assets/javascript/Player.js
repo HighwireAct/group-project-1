@@ -1,7 +1,7 @@
 class Player {
     constructor() {
         this.isGameMaster = false;
-        this.icon = "";
+        this.iconUrl = "";
         this.points = 0;
         this.ranking;
     }
