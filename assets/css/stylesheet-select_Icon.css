@@ -1,0 +1,23 @@
+.body{
+    font-family: "Segoe UI";
+    background-image: linear-gradient(#E5ECC1, #A2D4AB, #3EACA8, #547A82, #5A5050);
+    margin: 3em;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+.jumbotron{
+    font-size: 25px;
+}
+/* 
+#icons{
+    display: inline-block;
+    background-color:  #e5eec1;
+    text-align: center;
+ 
+} */
+
+.heading{
+    background-color: #5a5050
+} 
+
