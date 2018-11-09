@@ -3,6 +3,7 @@ class Game {
         // Array of possible game states
         this.states = [
             new State(function() {
+                // Render the div "icon-select" to the screen
                 let iconSelectDiv = $("<div>");
                 iconSelectDiv.attr("id", "icon-select");
                 iconSelectDiv.addClass("centered");
@@ -62,17 +63,17 @@ class Game {
     }
 
     /**
-     * Makes an AJAX query to generate a movie from a given search term
+     * Makes an AJAX query to generate a movie from a given ID
      * and pushes a new movie object into the game's movies array
-     * @param {string} term - term to conduct search with
+     * @param {string} movieId - ID of movie being requested
+     * @param {string} method
      */
-    getMovieBySearchTerm(term) {
-        let context = this;
+    getMovieById(movieId, method) {
+        let context = this; 
         let params = {
             api_key: '7b5ee640f4a3259d5c7b108eec04211d',
             page: 1,
             include_adult: false,
-            query: term
         }
 
         $.ajax({
