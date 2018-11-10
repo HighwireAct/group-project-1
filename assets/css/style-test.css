@@ -1,0 +1,146 @@
+/********************* 
+General
+*********************/
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+      font-family: "Segoe UI Light";
+      background-image: linear-gradient(#E5ECC1, #A2D4AB, #3EACA8, #547A82, #5A5050);
+      margin: 3em;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+  }
+  
+  .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  
+  
+  /********************* 
+  Select Icon State
+  *********************/
+  
+  /* For the appearance of icons */
+.icon {
+    padding: 10px;
+}
+
+.icon:hover {
+    background-color: lightgray;
+}
+  
+#start-game {
+    position: fixed;
+    left: 46%;
+    bottom: 30%;
+    translate: (-50%, 0);
+}
+  
+  /********************* 
+  Game State
+  *********************/
+  
+  
+  #page-header{
+      text-align: center;
+      color: slategray;
+      margin-bottom: 3em;
+  }
+  
+  /*Chat Div*/
+  
+  #chat{
+      display: inline-block;
+      border-radius: 10px;
+      width: 400px;
+  }
+  
+  #chat-header{
+      color: #e5eec1; 
+      background-color: #5A5050;
+      padding: 1px 10px;
+  
+  }
+  
+  
+  /* padding-right: 10px; is for spacing icons from text */
+  
+  
+  .message{
+      padding-left: 10px;
+      margin-top: 0.25em;
+      margin-bottom: 0.5em;
+      color: black;
+  }
+  
+  #chat-body{
+      font-family: "Fira Sans", Segoe UI; 
+      padding-left: 10px;
+      text-align: left;
+      background-color: #e5eec1;
+      height: 300px;
+      /* width: 400px; */
+      overflow-y: scroll;
+  }
+  
+  #chat-footer{
+      color: #f7fae8;
+      background-color: #5A5050;
+  }
+  
+  #chat-input {
+      display: inline-block;
+  }
+
+  #message-field {
+      width: 336px;
+  }
+  
+  /*Play Area*/
+  
+  #play-area {
+      display: inline-block;
+      width: 800px;
+  }
+
+  #image-container{
+      position: relative;
+      margin: 2em 5em;
+      border-radius: 10px;
+  }
+  
+  #timer{
+      background-color: #e5eec1;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: black;
+      /* text-align: center; */
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+      z-index: 100;  
+  }
+  
+  #movie-still{
+    border-radius: 10px;
+  }
+  
+  #hint{
+      background-color: #e5eec1;
+      color: black;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      
+  }
+  
+  /********************* 
+  Win State
+  *********************/

@@ -1,9 +1,15 @@
 class Movie {
-    constructor(movieObject) {
-        console.log(movieObject);
-        this.imageUrl = movieObject.backdrop_path;
+    constructor(imageUrl, title, acceptableAnswers, trivia) {
+        this.imageUrl = imageUrl;
+        this.title = title;
+        this.acceptableAnswers = acceptableAnswers;
+        this.releaseYear = trivia.releaseYear;
+        this.director = trivia.director;
+        this.cast = trivia.cast;
         this.trivia = [
-            `Year released: ${movieObject.release_date.substr(0, 4)}`
+            `Year released: ${this.releaseYear}`,
+            `Director: ${this.director}`,
+            `Leading Cast: ${this.cast}`
         ];
     }
 }
