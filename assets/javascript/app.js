@@ -1,5 +1,5 @@
 // List of user icons (for testing purposes)
-let iconUrls = ['blueprint_be.svg', 'blueprint_purr.svg', 'blueprint_spook.svg'];
+let iconUrls = ['blueprint_be.svg', 'blueprint_purr.svg', 'blueprint_spook.svg', 'blueprint_swim.svg', 'blueprint_submerge.svg', 'blueprint_believe.svg'];
 
 // Store reference to Firebase database
 const database = firebase.database();
@@ -62,7 +62,7 @@ database.ref('.info/connected').on('value', function(snapshot) {
                 changeSharedState(ICON_SELECT);
             }
             // Push player into player tree if room is under capacity
-            if (playerCount <= 2) {
+            if (playerCount <= 5) {
                 // Get array of movies for the round from the game master
                 database.ref('/game/movies/').once('value', function(snapshot) {
                     game.movies = snapshot.val();
@@ -75,6 +75,7 @@ database.ref('.info/connected').on('value', function(snapshot) {
                 // Assign player ID
                 playerId = playerRef.key;
             } else {
+                console.log("changing states!")
                 game.changeState(GAME_FULL);
             }
             

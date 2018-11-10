@@ -180,8 +180,12 @@ let gameStates =  [
     new State(
         function() {
             // ENTER
+            $("#game").empty();
             $("#chat").empty();
-            console.log("Room full!");
+
+            let gameFullMessage = $("<h2>").text("Room full; try again later!");
+            gameFullMessage.addClass("centered");
+            $("#game").append(gameFullMessage);
         },
         function() {
             // EXIT
