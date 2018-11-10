@@ -82,6 +82,8 @@ database.ref('.info/connected').on('value', function(snapshot) {
             // Remove player if they disconnect
             playerRef.onDisconnect().remove();
 
+
+
             // Destroy game if the final player disconnects
             if (playerCount === 1) {
                 database.ref("/game/").onDisconnect().remove();
@@ -300,11 +302,13 @@ function renderResultsTable() {
  * @param {string} type - type of message being displayed
  */
 function postMessage(message, icon, type) {
-    database.ref('/game/messages/').push({
-        message: message,
-        icon: icon,
-        type: type
-    });
+    if (message !== "") {
+        database.ref('/game/messages/').push({
+            message: message,
+            icon: icon,
+            type: type
+        });
+    }
 }
 
 // If message has been added to Firebase
